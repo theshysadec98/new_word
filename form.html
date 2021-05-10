@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form đơn giản</title>
+    <style>
+        h3 {
+            background: coral;
+            margin-right: 1500px ;
+            color: white;
+            text-align: center;
+        }
+        #color_text{
+            color: blue;
+        }
+        #color_choose{
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form id="mot">
+            <h3>SỞ THÍCH CỦA BẠN</h3>
+            <table>
+                <tr>
+                    <td><label id="color_text">Họ và tên</label></td>
+                    <td><input type="text" placeholder="username" size="30"><br/></td>
+
+                </tr>
+                <tr>
+                    <td><label id="color_text" >Email</label></td>
+                    <td><input type="email" size="20"><br/></td>
+
+                </tr>
+
+            </table>
+            <table>
+                <tr>
+                    <td><label id="color_text">Sở thích</label></td>
+                    <td><input type="checkbox"> <label id ="color_choose">Thể thao</label></td>
+                    <td><input type="checkbox"> <label id ="color_choose">Âm nhạc</label></td>
+                    <td><input type="checkbox"> <label id ="color_choose">Đọc sách</label></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td><input type="checkbox"> <labe id ="color_choose"l>Lướt web</label></td>
+                    <td><input type="checkbox"> <label id ="color_choose">Chời game</label></td>
+                    <td><input type="checkbox"> <label id ="color_choose">Điện ảnh</label></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td><input type="checkbox"> <label id ="color_choose">Du lịch</label></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Gửi thông tin"></td>
+                    <td><input type="reset" value="Nhập lại"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
