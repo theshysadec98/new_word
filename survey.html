@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lấy servey khách hàng</title>
+    <style>
+        #Age{
+            width: 50%;
+
+        }
+        #Money{
+            width: 50%;
+        }
+        #select_money{
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .select_money_1{
+            height: 50px;
+            background: burlywood;
+
+        }
+        .number0{
+            border: 1px solid black;
+            width: 800px;
+            height: 50px;
+        }
+        .number1{
+            border: 1px solid black;
+            width: 250px;
+            height: 50px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+            <div>
+            <h3>Market Research suvey</h3>
+            <h5>Please take a few moments to complete this satisfaction survey.</h5>
+            <p><b>What is your age range?</b></p>
+            <div><select name="Age" id="Age">
+                <option value="18-24" >18-24</option>
+                <option value="15-34">25-34</option>
+                <option value="35-50">35-50</option>
+                <option value="50+">50+</option>
+            </select>
+            </div>
+            </div>
+            <div class="select_money_1">
+            <div  id="select_money">
+                <label ><b>What is your yearly income range?</b></label>
+                <div >
+                    <select name="Money" id="Money">
+                        <option value="$0-$25.000">$0-$25.000</option>
+                        <option value="$25.001-$50.000">$25.001-$50.000</option>
+                        <option value="$50.001-$75.000">$50.001-$75.000</option>
+                        <option value="+$100.000">+$100.000</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+            <div>
+                <p><b>Gender Identity</b></p>
+                <input type="radio" name="gen"> Male <br/>
+                <input type="radio" name ="gen"> Famale  <br/>
+                <input type="radio" name="gen"> Nonbinary<br/>
+                <input type="radio" name="gen"> other<br/>
+                <input style="margin-left: 20px" type="text" name="gen">
+            </div>
+        <div>
+            <p><b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b></p>
+            <input type="checkbox"> Product 1 <br/>
+            <input type="checkbox"> Product 2<br/>
+            <input type="checkbox"> Product 3<br/>
+        </div>
+        <div>
+            <p><b>How often would you use our new product?</b></p>
+            <input type="radio"> Daily <br/>
+            <input type="radio"> Weekly<br/>
+            <input type="radio"> Monthly<br/>
+        </div>
+
+        <div>
+            <p><b>What would you pay for the new product?</b></p>
+            <table>
+                <tr>
+                    <td>$</td>
+                <td> <input type="number">. </td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Dolars</td>
+                <td>Cents</td>
+            </tr>
+            </table>
+        </div>
+    <div>
+        <p><b>What features would you like to see in the new product.</b></p>
+        <textarea name="comment" id="commment" cols="300" rows="10"></textarea>
+    </div>
+
+
+    </div>
+<div>
+    <table>
+        <tr>
+            <td class="number0"></td>
+            <td class="number1">Strongly Disagree</td>
+            <td class="number1">Disagree</td>
+            <td class="number1">Agree</td>
+            <td class="number1">Strongly Agree</td>
+        </tr>
+        <tr >
+            <td class="number0">Our products are priced fairly.</td>
+            <td class="number1"  ><input type="radio" name="2"> <br/> 1</td>
+            <td class="number1" ><input type="radio" name="2"> <br/> 2</td>
+            <td class="number1" ><input type="radio" name="2"> <br/> 3</td>
+            <td class="number1" ><input type="radio" name="2"> <br/> 4</td>
+        </tr>
+        <tr>
+            <td class="number0">Our products are high quality.</td>
+            <td class="number1" ><input type="radio" name="3"> <br/> 1</td>
+            <td class="number1" ><input type="radio" name="3"><br/> 2</td>
+            <td class="number1" ><input type="radio" name="3"><br/> 3</td>
+            <td class="number1" ><input type="radio" name="3"><br/> 4</td>
+        </tr>
+        <tr>
+            <td class="number0">You would recommend our product to a friend or coworker.</td>
+            <td class="number1" ><input type="radio" name="4"><br/> 1</td>
+            <td class="number1" ><input type="radio" name="4"><br/> 2</td>
+            <td class="number1" ><input type="radio" name="4"><br/> 3</td>
+            <td class="number1" ><input type="radio" name="4"><br/> 4</td>
+        </tr>
+
+    </table>
+</div>
+</body>
+</html>
