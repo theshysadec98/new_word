@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>JavaScript - using function</title>
+    <script>
+
+
+        function add(){
+            var value1=document.getElementById("n1").value;
+            var value2=document.getElementById("n2").value;
+            console.log(value1,value2);
+            document.getElementById("result").innerHTML=parseFloat(value1)+parseFloat(value2);
+        }
+        function minus(){
+            var value1=document.getElementById("n1").value;
+            var value2=document.getElementById("n2").value;
+            console.log(value1,value2);
+            document.getElementById("result").innerHTML = parseFloat(value1)-parseFloat(value2);
+        }
+        function multiply(){
+            var value1=document.getElementById("n1").value;
+            var value2=document.getElementById("n2").value;
+            console.log(value1,value2);
+            document.getElementById("result").innerHTML = parseFloat(value1)*parseFloat(value2);
+        }
+        function share(){
+            var value1=document.getElementById("n1").value;
+            var value2=document.getElementById("n2").value;
+            console.log(value1,value2);
+            document.getElementById("result").innerHTML = parseFloat(value1)/parseFloat(value2);
+        }
+    </script>
+</head>
+<body>
+<label>First Number:<input type="number" id="n1"/></label>
+<label>Second Number:<input type="number" id="n2"/></label>
+<input type="button" value="Add" onclick="add()"/>
+<input type="button" value="Minus" onclick="minus()"/>
+<input type="button" value="Multiply" onclick="multiply()"/>
+<input type="button" value="Share   " onclick="share()"/>
+<p>
+    Result = <span id="result" ></span>
+</p>
+</body>
+</html>
