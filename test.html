@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+<div id="hello">
+    <input type="button" onclick=alert("hello") value="Bai 1">
+    <input type="button" onclick="hello();"  value="Bai 2">
+    <input type="button" onclick='document.write("hello cc")' value="bai 3">
+    <input type="button" onclick= "hello_4();" value="bai 4">
+    <script>
+        function hello(){
+            document.getElementById("hello").innerHTML = "hello";
+        }
+        function hello_4(){
+            console.log("hello");
+        }
+    </script>
+</div>
+</body>
+</html>
