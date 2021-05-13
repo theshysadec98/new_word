@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="dayofmounth" type="number">
+    <input onclick="tinhtoan()" type="submit" value="Tính số ngày">
+    <p>Số ngày trong tháng là : <span id="result"></spanid></p>
+    <script>
+        function tinhtoan(){
+            var valuetion = document.getElementById("dayofmounth").value;
+
+            switch (valuetion){
+                case '1':
+                case '3':
+                case '5':
+                case '7':
+                case '8':
+                case '10':
+                case '12':document.getElementById("result").innerText = 'co 31 ngay';
+                    break;
+                case '2': document.getElementById("result").innerText = "co 28 hoac 29 ngay";
+                    break;
+                case '4':
+                case '6':
+                case '9':
+                case '11':document.getElementById("result").innerText = 'co 30 ngay';
+                    break;
+
+            }
+        }
+    </script>
+</body>
+</html>
