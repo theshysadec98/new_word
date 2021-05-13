@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Nhập cân nặng</p>
+        <input id="cannang" type="number">
+        <p>Nhập chiều cao</p>
+        <input id="chieucao" type="number">
+        <input type="button" onclick="chuyendoi()" value="chuyển đổi">
+        <p>
+            Giá trị bmi của bạn = <span id="result"></span><br/>
+            Bạn có cơ thể :<span id ="resultWord"></span>
+        </p>
+        <script>
+
+
+            function chuyendoi(){
+                var cannang = document.getElementById("cannang").value;
+                var chieucao = document.getElementById("chieucao").value;
+                var bmi = parseFloat(cannang)/( parseFloat(chieucao)*parseFloat(chieucao));
+                var resultWord='';
+                if(bmi<18){
+                    resultWord= "Underweight";
+                }
+                else if(bmi<25){
+                    resultWord ="Normal";
+                }
+                else if(bmi<30){
+                    resultWord= "Overweight";
+                }
+                else resultWord= "Obese";
+                document.getElementById("result").innerHTML = bmi;
+                document.getElementById("resultWord").innerHTML = resultWord;
+
+            }
+        </script>
+    </div>
+</body>
+</html>
