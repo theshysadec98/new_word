@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p style="position:absolute; top: 150px; left: 200px;">Do you now?</p>
+        <input onclick="yes()" type="button" value="yes" style="position:absolute; top: 200px; left: 200px;">
+        <input onmouseover="mouseover()" id="ramdom" type="button" value="no" style="position:absolute; left: 250px; top: 250px;">
+
+    </div>
+    <script>
+        function yes(){
+            alert("Ban da chon dung");
+        }
+
+        function mouseover(){
+
+            document.getElementById("ramdom").style.top =  Math.floor(Math.random()*window.innerHeight)+ 'px';
+            document.getElementById("ramdom").style.left =  Math.floor(Math.random()*window.innerWidth) + 'px';
+        }
+
+    </script>
+</body>
+</html>
