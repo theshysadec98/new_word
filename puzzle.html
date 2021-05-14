@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img onclick="doianh1()" id = "anh1" src="../untitled/img/Screenshot (48).png" width= '750'><br/>
+        <img onclick="doianh2()" id = "anh2" src="../untitled/img/Screenshot (41).png" width= '750'><br/>
+        <img onclick="doianh3()" id = "anh3" src="../untitled/img/Screenshot (47).png" width= '750'><br/>
+        <h2 id="ỉnamanhinh"></h2>
+    </div>
+    <script>
+       
+        function doianh1(){
+            // alert(document.getElementById("anh1").src);
+            let anh1 = document.getElementById("anh1").src;
+            
+            if(anh1 == 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(50).png' ){
+                document.getElementById("anh1").src = 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(48).png'
+                
+            }
+            if(anh1 == 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(48).png'){
+                document.getElementById("anh1").src = 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(50).png'
+            }
+        }
+        function doianh2(){
+            let anh2 = document.getElementById("anh2").src;
+            if(anh2 == 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(41).png' ){
+                document.getElementById("anh2").src ='file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(51).png';
+            }
+            if(anh2 == 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(51).png'){
+                document.getElementById("anh2").src = 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(41).png'; }
+            
+        }
+        function doianh3(){
+            let anh3 = document.getElementById("anh3").src;
+            if(anh3 == 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(47).png'){
+                document.getElementById("anh3").src = 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(49).png';
+               
+            }
+            if(anh3 == 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(49).png'){
+                document.getElementById("anh3").src = 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(47).png';
+            }
+        }
+        
+        if( document.getElementById("anh1").src == 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(50).png'){
+               if( document.getElementById("anh2").src == 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(52).png'){
+                   if( document.getElementById("anh3").src == 'file:///C:/Users/ADMIN.DESKTOP-BAB4ILM/WebstormProjects/untitled/img/Screenshot%20(49).png'){
+                       document.getElementById("ỉnamanhinh").innerHTML = "Dung";
+                   }
+               }
+            }
+           
+    </script>
+</body>
+</html>
