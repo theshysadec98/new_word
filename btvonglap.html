@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // bai 1
+        var a = parseInt(prompt('Nhap gia tri cua a:'));
+        var b = parseInt(prompt('Nhap gia tri cua b:'));
+        if(a%b==0) alert("a chia het cho b");
+        else alert('a khong chia het cho b.');
+
+        // bai 2
+        var age = parseInt(prompt('Nhap tuoi:'));
+        if(age < 14) alert('Ban chua du tuoi vao 10');
+        else alert('Ban da du tuoi');
+
+        //bai 3
+        var number = parseInt(prompt('Nhap gia tri:'));
+        if(number <0) alert("Gia tri do nho hon 0");
+        else if (number > 0) alert("Gia tri do lon hon 0");
+        else alert("day la gia tri 0");
+
+        // bai 4
+        var number1 = parseInt(prompt("nhap gia tri number1 :"));
+        var number2 = parseInt(prompt("Nhap gia tri cua number2:"));
+        var number3 = parseInt(prompt("Nhap gia tri cua number3:"));
+
+        if(number1 > number2){
+            if(number1> number3) alert("number1 la lon nhat");
+            else alert("number3 la gia tri lon nhat");
+        }else {
+            if(number2 > number3) alert("number2 la lon nhat");
+            else alert("number3 la gia tri lon nhat");
+        }
+
+        //bai 5
+        var point = parseFloat(prompt("Nhap gia tri diem trung binh cua hs:"));
+        if(point<='10' && point >= '8') alert("day la hoc sinh gioi");
+        else if(point <'8' && point>= '6.5') alert("day la hoc sinh kha");
+        else if(point < '6.5' && point>= '5') alert("day la hoc sinh trung binh");
+        else alert("day la hoc sinh yeu");
+
+        //bai 6
+
+    </script>
+</body>
+</html>
