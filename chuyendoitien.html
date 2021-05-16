@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <input id="number"type="number" >
+    <select name="formCurrency" id="formCurrency">
+        <option value="VietNam">Viet Nam</option>
+        <option value="USD"> USD</option>
+    </select>
+    <select name="toCurrency" id="toCurrency">
+        <option value="VietNam">Viet Nam</option>
+        <option value="USD"> USD</option>
+    </select>
+    <input onclick="submit()" id="submit" type="submit">
+    <p id="result"></p>
+    <script>
+        function submit(){
+            var number = document.getElementById("number");
+            var formCurrency = document.getElementById("formCurrency");
+            var toCurrency = document.getElementById("toCurrency");
+            var value = 0;
+
+            if(formCurrency.value == 'VietNam' && toCurrency.value == 'VietNam'){
+                value = number.value + "VND";
+            }
+            if(formCurrency.value == 'VietNam' && toCurrency.value == 'USD'){
+                value = number.value/21000 + "USD";
+            }
+            if(formCurrency.value == 'USD' && toCurrency.value == 'VietNam'){
+                value = number.value*21000 + "VND";
+            }
+            if(formCurrency.value == 'USD' && toCurrency.value == 'USD'){
+                value = number.value + 'USD';
+            }
+
+            document.getElementById("result").innerHTML = value;
+        }
+    </script>
+    </div>
+</body>
+</html>
