@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+        <script>
+            // bai 1
+            // for(let i = 0; i <100; i++){
+            //     if(i==99){
+            //         document.write("Da hoan thanh");
+            //     }
+            // }
+            // bai 3, 4
+            let fibonacci = 0 , soDauTien = 0; 
+            function f(a){
+                if(a <= 0) return 0;
+                else if(a == 1 || a == 2) return 1 ;
+                else   return f(a-1) + f(a-2);
+                }
+                
+            // for( let j = 3 ; j <23; j++){
+            //     fibonacci = '<p>' + f(j) + '</p> ';
+            //     document.write(fibonacci);
+            // }
+
+            for( let j = 3 ; j <23; j++){
+                fibonacci =f(j);
+                if(fibonacci % 5 == 0){
+                
+                    document.write(fibonacci);
+                    break;
+                }   
+            }
+            var sum = 0, count = 0;
+            //bai 5
+            // for( let j = 3 ; j <23; j++){
+            //     sum= sum + f(j);
+            // }
+            // document.write('<br/>'+sum);
+
+            // bai 6
+            for(let i = 0 ; count <= 30; i++){
+                if(i%7==0){
+                    sum+= i;
+                    count++;
+                }
+            }   
+            document.write("<br/>"+sum);
+
+            // bai 7
+            
+        </script>
+    </div>
+</body>
+</html>
