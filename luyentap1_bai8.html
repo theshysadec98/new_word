@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="playGame()" id ="choi">Chơi đê</button>
+        <p id="result"></p>
+        <script>
+            function playGame(){
+                var number1 = parseInt(prompt("Nhap vao gia tri ma ban muon tu 1 - 100: ",''));
+                if(number1<1 || number1 >100){
+                    while (number1<1 || number1 >100) {
+                        number1 = parseInt(prompt("Nhap vao gia tri ma ban muon tu 1 - 100: ",''));
+                    }
+                }
+                var number2 = parseInt(Math.random() * 100);
+                if(number1 == number2){
+                    document.getElementById('result').innerHTML = 'Ban da ket thuc luot choi.';
+                }
+                if(number1 > number2){
+                    document.getElementById('result').innerHTML = 'Ban da chien thang.';
+                }
+                if(number1 < number2) {
+                    document.getElementById("result").innerHTML = 'Ban da thua.';
+                }
+                
+            }
+        </script>
+    </div>
+</body>
+</html>
