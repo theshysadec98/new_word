@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //bai 1
+        // function f(a){
+        //     if(a <= 0) return 0;
+        //     else if( a == 1 || a == 2) return 1;
+        //     else return f(a-1) + f(a-2);
+        // }
+        // for(var i = 0; i < 10; i++){
+        //     document.write(f(i) + "<br/>");
+        // }
+
+        // /// bai 2
+        // function giaithua(a){
+        //     if( a <= 0) return 0;
+        //     else if(a == 1) return 1;
+        //     else return a*giaithua(a-1);
+        // }
+        // var x = parseInt(prompt("Nhap gia tri cua so nguyen duong:"));
+        // document.write(giaithua(x));
+
+        //bai 3 + 4
+        for(var i=1; i<=5;i++){
+            for(var j = 1; j<=i; j++){
+                document.write('*');
+            }
+            document.write('<br/>');
+        }
+        for(var i=1; i<=5;i++){
+            for(var j = 5; j>=i; j--){
+                document.write('*');
+            }
+            document.write('<br/>');
+        }
+        for(var i=1; i<=5;i++){
+            document.write('<br/>');
+            for( var k = i; k<=5; k++){
+                document.write('&nbsp&nbsp');
+            }
+            for(var j = 1; j<=i; j++){
+                document.write('*');
+            }
+            
+        }
+        for(var i=5; i>=1;i--){
+            document.write('<br/>');
+            for( var k = i; k<=5; k++){
+                document.write('&nbsp&nbsp');
+            }
+            for(var j = 1; j<=i; j++){
+                document.write('*');
+            }
+            
+        }
+
+        for(var i = 1; i<= 6; i++){
+            document.write("<br/>");
+            for(var j = 1; j<=100; j++){
+                if(i==1 || i == 6){
+                    document.write('*');
+                }
+                else {if( j==1 || j == 100) {
+                    document.write('*');
+                }else if( j>1 && j<100){
+                    document.write('&nbsp&nbsp');
+                }
+                    
+                }
+            }
+        }
+        // // // bai 5
+        // var soTienVay = parseFloat(prompt("nhap so tien vay lai suat 10% 1 thang:" , ''));
+        // var soThangVay = parseFloat(prompt("Nhap so thang vay:" , ''));
+        // function lai(soTien,thangVay){
+        //     if(thangVay <= 0) return soTien;
+        //     return lai(soTien, thangVay-1)*1.1;
+        // }
+        // document.write("<br/>"+lai(soTienVay,soThangVay));
+        
+
+
+        // bai 6s
+            document.write("<br/>");
+        for(i = 1; i < 7; i++) {
+		    for(j = 1; j <= 7; j++) {
+			    if(!((i == 1 && (j == 1 || j == 4 || j == 7)) || (i == 4 && (j == 1 || j == 7)) || (i == 5 && (j <= 2 || j >= 6)) || (i == 6 && (j <= 3 || j >= 5)))) {
+                    document.write(" * ");
+			} else {
+				document.write("&nbsp&nbsp");
+			}
+		}
+		document.write("<br/>");
+	}
+    </script>
+</body>
+</html>
