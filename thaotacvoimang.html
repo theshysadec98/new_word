@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number">
+    <input type="submit" id="submit" value="Đổi chuỗi" onclick="submit()"><br/>
+    <input type="text" id="text">
+    <input type="submit" id="inhoa" value="in hoa chữ" onclick="inhoa()">
+    <p id= "result"></p>
+    <p id= "resultTo"></p>
+
+    <script>
+
+        // bai 1
+        function noiChuoi( arr ){
+            var text = arr.toString();
+            return text;
+        }
+        var myColor = ["Red", "Green", "White", "Black"];
+        console.log(noiChuoi(myColor));
+            
+
+        // bai 2
+
+        function submit(){
+            var x = document.getElementById('number').value;
+            var y = x.split('');
+            var z='';
+            // var z = y.map(function(y){
+            //     if(y%)
+            // });
+            for(var i = 0; i< y.length; i++){
+                if(parseInt(y[i]) %2 ==0) z+= y[i]+'-';
+                else z+= y[i];
+            }   
+
+
+            document.getElementById('result').innerHTML = z;
+        }
+        
+        // bai 3
+        function inhoa(){
+            var a = document.getElementById("text").value;
+            var b = a.toUpperCase();
+            document.getElementById('resultTo').innerText = b;
+        }
+
+    </script>
+</body>
+</html>
