@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input onclick=good() id="number1" type="checkbox"   ><br/>
+        <input onclick=fast() id="number2" type="checkbox"   ><br/>
+        <input onclick=cheap() id="number3" type="checkbox"   ><br/>
+        
+    <script>
+        
+            function good(){
+                var good = document.getElementById("number1").checked;
+                var fast = document.getElementById("number2").checked;
+                var cheap = document.getElementById("number3").checked;
+                
+                if( cheap == true && fast == true){
+                    if(Math.random()<0.5){
+                        document.getElementById("number3").checked == false;
+                    }
+                    else{
+                        document.getElementById("number2").checked == false;
+                    }
+                }
+                    
+            }
+            function fast(){
+                var good = document.getElementById("number1").checked;
+                var fast = document.getElementById("number2").checked;
+                var cheap = document.getElementById("number3").checked;
+                
+                if(good == true && cheap == true){
+                    if(Math.random()<0.5){
+                        document.getElementById("number1").checked == false;
+                    }
+                    else{
+                        document.getElementById("number3").checked == false;
+                    }
+                }
+                    
+            }
+            function cheap(){
+                var good = document.getElementById("number1").checked;
+                var fast = document.getElementById("number2").checked;
+                var cheap = document.getElementById("number3").checked;
+                
+                if(good == true && fast == true){
+                    if(Math.random()<0.5){
+                        document.getElementById("number2").checked == false;
+                    }
+                    else{
+                        document.getElementById("number1").checked == false;
+                    }
+                }
+                   
+            }
+                
+                
+
+    </script>
+    </div>
+</html>
