@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <input type="text" id="english">
+    <input type="submit" id="search" onclick="searchVietNamtoEnglish()" value="Search">
+    <p id="result"></p>
+    <script>
+        
+        
+        function searchVietNamtoEnglish(){
+            var engLish = ['different' ,'used',	'important',	'large',	'available',	'popular' ,'able'	,'basic'	,'known']
+            
+            var tiengViet = ['khác nhau', 'được sử dụng', 'quan trọng', 'lớn', 'có sẵn', 'phổ biến', 'thể', 'cơ bản', 	'được biết đến']
+            
+
+            var inputEnglish = String(document.getElementById("english").value);
+            for( var i = 0; i< engLish.length ;i++)
+                if(inputEnglish == engLish[i]) document.getElementById('result').innerHTML = tiengViet[i]; 
+            
+        }
+    </script>
+    </div>
+</body>
+</html>
