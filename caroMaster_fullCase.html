@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align:center;">
+        <h1 >Bàn cờ ca rô</h2>
+        <p id="caroMaster"/>
+        <input type='submit' value='player1' onclick=player1() id='player1'>
+        <input type='submit' value='player2' onclick=player2() id='player2'>
+
+        
+    </div>
+    <script>
+        var value = document.getElementById('caroMaster');
+        var data = '';
+        var board = [];
+        for(let i = 0 ; i < 10; i++){
+            board[i] = new Array('.','.','.','.','.','.','.','.','.','.','.','.','.','.','.');
+        }
+        for(let i = 0; i < 10; i++){
+            data += '<br/>';
+            for(let j = 0 ; j < 10; j++){
+                data += board[i][j] + '&nbsp;&nbsp;&nbsp;&nbsp;';
+            }
+        }
+        data += "<br/><br/> <input type='submit' value='player1' onclick=player1() id='player1'> <input type='submit' value='player2' onclick=player2() id='player2'>";
+        value.innerHTML = data;
+        
+        function player1(){
+            let player1_X = +prompt("nhap X cua player 1:");
+            let player1_Y = +prompt("nhap Y cua player 1:");
+            data = '';
+            board[player1_X][player1_Y] = 'X';
+            for(let i = 0 ; i < 10 ; i++){
+                data += '<br/>';
+                for(let j=0; j  < 10 ; j++){
+                    data += board[i][j] + '&nbsp;&nbsp;&nbsp;&nbsp;';
+                }
+            }
+            playerWin();
+            data += "<br/><br/> <input type='submit' value='player1' onclick=player1() id='player1'> <input type='submit' value='player2' onclick=player2() id='player2'>";
+            value.
+            innerHTML = data;
+        }
+
+        function player2(){
+            let player2_X = +prompt("nhap X cua player 2:");
+            let player2_Y = +prompt("nhap Y cua player 2:");
+            data = '';
+            board[player2_X][player2_Y] = 'O';
+            for(let i = 0 ; i < 10 ; i++){
+                data += '<br/>';
+                for(let j=0; j  < 10 ; j++){
+                    data += board[i][j] + '&nbsp;&nbsp;&nbsp;&nbsp;';
+                }
+            }
+            playerWin();
+            data += "<br/><br/> <input type='submit' value='player1' onclick=player1() id='player1'> <input type='submit' value='player2' onclick=player2() id='player2'>";
+            value.innerHTML = data;
+        }
+
+        function playerWin(){
+            for(let i = 0; i < 10 ;i ++ ){
+                for( let j = 0; j< 10; j++){
+                    if(board[i][j]!= '.'){
+                        if((board[i][j] == board[i][j+1] && board[i][j] == board[i][j+2])
+                        || (board[i][j] == board[i+1][j] && board[i][j] == board[i+2][j] ) 
+                        || (board[i][j] == board[i+1][j+1] && board[i][j] == board[i+2][j+2])
+                        || (board[i][j] == board[i-1][j+1] && board[i][j] == board[i-2][j+2])){
+                        if(board[i][j] == 'X') alert('player 1 win.');
+                        else  alert("player 2 win.");
+                    }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
