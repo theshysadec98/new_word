@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="result"></p>
+        <script>
+
+            //bai 1
+            var x = [
+                        [1, 2, 1, 24],
+                        [8, 11, 9, 4],
+                        [7, 0, 7, 27],
+                        [7, 4, 28, 14],
+                        [3, 10, 26, 7]
+            ];
+                
+            for (var i = 0; i < 4; i++) {
+                document.getElementById("result").innerHTML += '<br/>'
+               for (var j = 0; j <4; j++){
+                document.getElementById("result").innerHTML += x[i][j] + '&nbsp&nbsp';
+               }
+            }
+
+            // bai 2
+            var arr = [ 'c', 's', 'c', '2', '6', '1' ] ;
+            var result = '';
+            for(var i = 0; i <= arr.length/2; i++){
+                result += arr[i];
+                arr[i] = arr[arr.length-(1+i)];
+                arr[arr.length-(1+i)] =result ;
+            }
+            console.log(arr);
+
+            // Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng. 
+            var input = parseInt( prompt("nhap kich thuoc cua mang :"));
+            var arrNew = new Array(input);
+            var count = 1;
+            for( var i = 0; i < input ; i++){
+                arrNew[i] = prompt("nhap ki tu cuar phan tu:");
+                count ++;
+            }
+
+            // Bài 4: Viết một chương trình để đếm số từ trong một chuỗi
+            var value = 'hello';
+            console.log(value.length);
+
+            // Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+            var arr1 = 'h-e-l-l-o';
+            var arr2 = 'h-e-l-l-o';
+            if(arr1.length == arr2.length){
+                if(arr1 == arr2){ console.log("2 chuoi giong nhau.");}
+            }
+
+            //Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+            
+            for(var i  = 0; i< arr.length; i++){
+                if(arr[i] == '-') arr[i] = '_';
+            }
+        </script>
+    </div>
+</body>
+</html>
