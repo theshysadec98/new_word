@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="checkout()">
+    <div><form name ='f'>
+        <h3>Faking Textarea on Typing</h3>
+        <textarea name='txt'  cols="30" rows="10" ></textarea>
+      
+    </form>
+    </div>
+    <script>
+        
+
+        var a=new Array(),n=""
+        a[1]='P';a[2]='H';a[3]='A';a[4]='N';a[5]=' ';a[6]='T';a[7]='Ấ';a[8]='N';a[9]=' ';a[10]='T';a[11]='R';a[12]='U';a[13]='N';a[14]='G';
+        function checkout(){
+            t=document.f.txt.value
+            j=t.length
+            if(j>0){
+                for(var i=1;i<=j;i++){
+                    n=n+a[i]
+                    if(i==14){
+                        document.f.txt.value=""
+                        n=""
+                    }
+                }                   
+            }
+            document.f.txt.value=n
+            n=""
+            setTimeout("checkout()",1)
+        }
+        
+
+    </script>
+</body>
+</html>
