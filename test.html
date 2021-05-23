@@ -5,23 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
 <body>
-
-<div id="hello">
-    <input type="button" onclick=alert("hello") value="Bai 1">
-    <input type="button" onclick="hello();"  value="Bai 2">
-    <input type="button" onclick='document.write("hello cc")' value="bai 3">
-    <input type="button" onclick= "hello_4();" value="bai 4">
     <script>
-        function hello(){
-            document.getElementById("hello").innerHTML = "hello";
+        var arr =[0,6,3,1,6];
+        //Push new
+        function pushEdit(arr, a){
+            arr[arr.length] = a ;
+            return arr;
         }
-        function hello_4(){
-            console.log("hello");
+        
+        pushEdit(arr,5)
+        console.log(arr);
+
+        // Pop new
+        function popEdit(arr){
+            let arrNew  = [];
+            for(var i = 0; i < this.arr.length-1;i++){
+                arrNew[i] = this.arr[i];
+            }
+            this.arr = arrNew;
+            return this.arr;
         }
+        popEdit(arr);
+        console.log(arr);
+        
+
+        // Sort new
+        function sortNumber(arr){
+            let result = 0;
+            if(Math.random() < 0.5 ){
+                for(var i = 0; i < arr.length ; i ++){
+                    for(var j = arr.length-1 ; j >= i  ; j--){
+                        if(arr[i] < arr[j]){
+                            result = arr[i];
+                            arr[i] =arr[j];
+                            arr[j] = result;  
+                        }
+                    }
+                }
+            }
+            else{
+                for(var i = 0; i < arr.length ; i ++){
+                for(var j = arr.length-1 ; j >= i  ; j--){
+                    if(arr[i] > arr[j]){
+                        result = arr[i];
+                        arr[i] =arr[j];
+                        arr[j] = result;  
+                    }
+                }
+            }
+            }
+            
+
+            return this.arr;
+        }
+        sortNumber(arr);
+        console.log(arr);
+
+        // Add new 
+        // function addEdit(arr , index, value){
+        //     let result = 0 ;
+        //     for(var i = index-1; i <= arr.length; i++){
+        //         result = this.arr[i];
+        //         this.arr[i] = this.arr[i+1];
+        //         this.arr[i+1] = result;
+        //     }
+        //     return this.arr;
+        // }
+        // addEdit(arr, 5, 10);
+        // console.log(arr);
+
+
     </script>
-</div>
+
+
 </body>
 </html>
