@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(s){ 
+          
+        if(s.length == 0 || s.length == 1) return true;
+        else {
+            if(s.charAt(0) != s.charAt(s.length-1)) return false;
+            else return isPalindrome(s.substring(1, s.length-1));
+        }
+    }
+    
+    console.log(isPalindrome('asda1dsa'));
+    </script>
+</body>
+</html>
