@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>ADD NEW PRODUCT</h3>
+        <input type="text" id="nameProduct">
+        <input type="button" value= "Add" id ="Add" onclick="addProduct()">
+        <table id = "result">
+            
+        </table>
+    </div>
+    <script>
+
+        var productList = [];
+        showData();
+
+        function addProduct(){
+            var nameProduct = document.getElementById('nameProduct').value;
+            productList.push(nameProduct);
+            console.log(productList);
+            showData();
+        }
+        
+        function showData(){ 
+            var product = '';
+            for (var i = 0; i <productList.length ; i++){
+                product  += '<tr>'
+                     +'<td ><p id="editName">'+ productList[i] +'</p></td>'
+                    +'<td id ="buttonProduct"><input type="button" value="Edit" onclick=editName('+i+')></td>'
+                    +'<td id ="buttonProduct"><input type="button" value="Delete" onclick=deleteProduct('+i+')></td>'
+                    +'</tr>';
+           }
+           document.getElementById("result").innerHTML = product;
+        }
+        function editName(value){
+            var nameNew = prompt('Nhap lai ten cua san pham:');
+            productList[value] = nameNew;
+            console.log(productList)
+            showData();
+        }
+        function deleteProduct(value){
+            productList.splice(value,1);
+            console.log(productList);
+            showData();
+        }
+    </script>
+</body>
+</html>
