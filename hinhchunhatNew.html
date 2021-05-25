@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+
+    <div>
+        <canvas id="Rectangle" width='1000px' height='1000px' style='border: 1px solid black;'>
+    </div>
+    <script>
+        class Rectangle{
+            constructor(height, width){
+                this.height = height;
+                this.width = width;
+            }
+            
+            get S(){
+                return this.valueS;
+            }
+            valueS(){
+                return this.width*this.height;
+            }
+
+            get C(){
+                return this.valueC;
+            }
+            valueC(){
+                return (this.width+this.height)*2;
+            }
+
+        }
+
+        function createRectangle(){
+            var ctx = document.getElementById('Rectangle').getContext('2d');
+            var result = new Rectangle(600,300);
+            ctx.fillStyle = '#region ';
+            ctx.fillRect(0,0,result.height,result.width);
+            console.log(result.C());
+            console.log(result.S());
+        }
+
+        createRectangle();
+        
+    </script>
+</body>
+</html>
