@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script>
+        class Temperature{
+            constructor(valueC){
+                this.valueC = valueC
+            }
+            get ValueCtoF(){
+                return this.valueF;
+            }
+            valueF(){
+                return this.valueC*1.8 + 32;
+            }
+
+            get ValueCtoK(){
+                return this.valueK;
+            }
+            valueK(){
+                return this.valueC + 273;
+            }
+        }
+
+        var x = new Temperature(25);
+        console.log(x.ValueCtoF());
+        console.log(x.ValueCtoK());
+    </script>
+</body>
+</html>
