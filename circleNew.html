@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <canvas id="newCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3; text-align:center">
+    </div>
+    <script>
+            function Circle( x, y, radius){ 
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+            }
+
+            function randomHex(){
+                return Math.floor(Math.random()*255);
+            }
+            function randomColor(){
+                var red = randomHex();
+                var blue = randomHex();
+                var green = randomHex();
+                
+                return "rgb(" + red + "," +  blue + "," + green + ")";
+            } 
+            function createCircle(){
+                var ctx = document.getElementById('newCanvas').getContext('2d');
+                var randomRadius = Math.floor(Math.random()*80);
+                var color = randomColor();
+                var x = Math.random()*window.innerWidth;
+                var y = Math.random()*window.innerHeight
+                var circle = new Circle(x, y, randomRadius);
+                ctx.beginPath();
+                ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+
+        for (var i = 0; i <1000; i++){
+            createCircle();
+        }
+        
+    </script>
+</body>
+</html>
