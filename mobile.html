@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        class Mobile{
+                constructor(){
+                    this.name = name;
+                    this.message = '';
+                    this.inBox = [];
+                    this.outBox = [];
+                }
+                writeMess(message){
+                    this.message = message;
+                }
+                receiveMes(message , mobile){
+                    this.inBox.push(this.message);
+                }
+                sendMess(mobile){
+                    this.outBox.push(this.message);
+                    mobile.receiveMes(this.message, this);
+                }
+                getAllMess(){
+                    return this.inBox;
+                }
+                
+        }
+        
+        var number1 = new Mobile('Iphone');
+        var number2 = new Mobile('Nokia');
+        number1.writeMess('hello number2');
+        number1.sendMess(number2);
+        number2.writeMess('hello number1');
+        number2.sendMess(number1);
+        console.log(number1);
+        console.log(number2);
+
+
+    </script>
+</body>
+</html>
