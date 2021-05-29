@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <div>
+        
+        <canvas id="myCanvas" width="1000px" height="1000px" style='border: 1px solid black;'> 
+            
+        
+    </div>
+    <script>
+        window.onload = function(){
+            var x = 100;
+            var y = 100;
+            var value = 2;
+            var key, pos = 0;
+            var canvas = document.getElementById('myCanvas');
+            var ctx = canvas.getContext('2d');
+            var img = new Image();
+
+            img.onload = function() {
+                ctx.drawImage(img, x, y);
+            }
+            img.src = 'tpdx.jpg';
+            document.onkeydown = function(e){
+                pos = 1 ;
+                key = window.event ? e.keyCode : e.which ;
+            }
+            document.onkeyup = function(e){pos = 0;}
+            setInterval (function(){
+                if(pos == 0 ) return ;
+                if(key == 37) x-=value;
+                if(key == 38) y-=value;
+                if(key == 39) x+=value;
+                if(key == 40) y+=value;
+                canvas.width = canvas.width;
+                ctx.drawImage(img,x,y);
+            }, 0);
+        
+        }
+       
+    </script>
+</body>
+</html>
