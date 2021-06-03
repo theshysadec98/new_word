@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Cau 1
+        function equation1(a,b){
+            if(a == 0) return false;
+            else return -b/a;
+        }
+
+        // Cau 2:
+        function searchValue(arr , index){ 
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] == index) return "The value is in Array: " + parseInt(i+1);
+            }
+            return "The value is not in Array";
+        }
+        // Cau 3: 
+        function searchString(arr){
+            let count = 0;
+            for(let i = 0 ; i < arr.length; i++){
+                if(arr[i] == 'a' || arr[i] == 'o' || arr[i] == 'e' || arr[i] == 'u' || arr[i] == 'i') 
+                    count++;
+            }
+            if(count <= 0) return false;
+            else return count;
+        }
+
+        // // Cau 4: Viết
+        // //a
+        class Animal{
+            constructor(name, weight){
+                this.name = name;
+                this.weight = weight;
+            }
+            setName(name){
+                this.name = name;
+            }
+            setWeight(weight){
+                this.weight = weight;
+            }
+            getName(){
+                return this.name;
+            }
+            getWeight(){
+                return this.weight;
+            }
+            toString(){
+                return console.log("Name :" + this.name + "\n Weight :" + this.weight);
+            }
+        }
+        //b
+        var objAnimal1 = new Animal();
+        objAnimal1.setName('Elephant');
+        objAnimal1.setWeight(45.6);
+        objAnimal1.toString();
+
+        var objAnimal2 = new Animal("New", 56);
+        objAnimal2.setName('Mouse');
+        objAnimal2.toString();
+
+        // // Cau 5
+
+    </script>
+</body>
+</html>
